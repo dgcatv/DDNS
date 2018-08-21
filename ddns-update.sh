@@ -4,7 +4,6 @@ device=eth0
 #log file
 log=/home/heiok/ddns.log
     if [ ! -f $log ];then
-	touch $log
     fi
 #check WAN IP Addr
     NewIP=`ifconfig $device | grep 'inet addr' | awk -F ':' '{print $2}' | awk '{print $1}'`
